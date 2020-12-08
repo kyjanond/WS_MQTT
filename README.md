@@ -1,16 +1,16 @@
 # COM_Workshop_ITECH2020
 ## Introduction
 Dear participants,
-<p>Our workshop day will start with a lecture that will focus general electronic and machine-to-machine (m2m) communication following by a workshop where we will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s) using MQTT.</p>
+<p>Our workshop day will start with a lecture that will focus on general electronic and machine-to-machine (m2m) communication following by a workshop where we will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s) using MQTT.</p>
 
 The day will be divided into several parts (time is only tentative):
-1. (60 min) Lecture focusing basics of electronic communication and standard communication patterns and protocols. 
+1. (60 min) Lecture focusing on basics of electronic communication and standard communication patterns and protocols. 
 2. (30 min) Discussion and questions.
-3. (30 min) Explanaition of MQTT with demonstration.
+3. (30 min) Explanation of MQTT with demonstration.
 4. (45 min) Exercise: A simple chat communication workflow over the internet using MQTT.
 5. (45 min) Exercise: Deploying your own Mosquitto MQTT broker and running several examples using Grasshopper.
 6. (60-90 min) Presentation of your projects and discussion.
-7. (rest of the time) Group work with me running (virtually) around OR and explanation of some more specilized workflow or example relevant to everyone
+7. (rest of the time) Group work with me running (virtually) around OR and explanation of some more specialized workflow or example relevant to everyone
 
 If we still have time we can also briefly go over representational state transfer (REST).
 We will also fit our lunch break somewhere in between.
@@ -31,7 +31,7 @@ In order to have a smooth workshop experience and to avoid wasting time I put to
 1. Install Iron Python (ipy)
 	- https://github.com/IronLanguages/ironpython2/releases/tag/ipy-2.7.8
 2. Configure IRONPYTHONPATH and PATH Environmental variables
-	- Append ipy installation folder path (probably `C:\Program Files\IronPython 2.7`) to your PATH environmental varible
+	- Append ipy installation folder path (probably `C:\Program Files\IronPython 2.7`) to your PATH environmental variable
 	- Create new environmental variable called IRONPYTHONPATH and set it to your ipy.exe path (probably `C:\Program Files\IronPython 2.7\ipy.exe`
 	- Test your installation by starting a new terminal (PowerShell or Command Prompt) and typing `ipy -V`. It should show in your terminal `IronPython 2.7.8 2.7.8.0 on .NET 4.0.30319.42000` (or very similar). If it does not you did something wrong and you have to fix it (use google or send me an email).
 3. Install pip for ipy
@@ -50,6 +50,7 @@ In order to have a smooth workshop experience and to avoid wasting time I put to
 ![Rhino Python Script setup](images/rhino_python_setup.PNG?raw=true)
 
 *Install Python 3 (if you don't have it already):*
+
 1. If you are working with several Python version on Windows please read https://stackoverflow.com/a/57504609/7597893
 2. Install Python 3 and add setup environmental variables:
 	- clean install: https://www.python.org/downloads/
@@ -57,8 +58,8 @@ In order to have a smooth workshop experience and to avoid wasting time I put to
 3. Install pip
 	- https://www.w3schools.com/python/python_pip.asp
 
-
 *Install Visual Studio Code:*
+
 1. Install VSCode for Windows 
 	- https://code.visualstudio.com/
 2. Open VSCode and install the following extensions (how to install extensions: https://code.visualstudio.com/docs/editor/extension-gallery):
