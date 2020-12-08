@@ -44,7 +44,7 @@ In order to have a smooth workshop experience and to avoid wasting time I put to
 	- Open Rhino and go to `Tools>Python Script>Edit...`
 	- In the Python Script window go to `Tools>Settings` and click on an icon `Add to search path`
 	- Select the `Lib/site-packages` folder from your ipy installation folder (probably `C:\Program Files\IronPython 2.7\Lib\site-packages`) and press `OK`
-  
+![Rhino Python Script setup](images/rhino_python_setup.PNG?raw=true)
 	- Test your setup by opening Grasshopper, putting GhPython Script component on a canvas and write `import yaml`. Run your script and if it does not show an error all is good.
 
 
