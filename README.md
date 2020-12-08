@@ -50,11 +50,11 @@ In order to have a smooth workshop experience and to avoid wasting time I put to
 ![Rhino Python Script setup](images/rhino_python_setup.PNG?raw=true)
 
 *Install Python 3 (if you don't have it already):*
-If you are working with several Python version on Windows please read https://stackoverflow.com/a/57504609/7597893
-1. Install Python 3 and add setup environmental variables:
+1. If you are working with several Python version on Windows please read https://stackoverflow.com/a/57504609/7597893
+2. Install Python 3 and add setup environmental variables:
 	- clean install: https://www.python.org/downloads/
 	- Anaconda distribution (gives you some additional functionality and preinstalled packages): https://www.anaconda.com/products/individual
-2. Install pip
+3. Install pip
 	- https://www.w3schools.com/python/python_pip.asp
 
 
