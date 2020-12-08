@@ -1,7 +1,7 @@
 # COM_Workshop_ITECH2020
 ## Introduction
 Dear participants,
-My lecture will focus on general electronic and machine-to-machine (m2m) communication following by a workshop where we will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s) using MQTT.
+<p>Our workshop day will start with a lecture that will focus general electronic and machine-to-machine (m2m) communication following by a workshop where we will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s) using MQTT.</p>
 
 The day will be divided into several parts (time is only tentative):
 1. (60 min) Lecture focusing basics of electronic communication and standard communication patterns and protocols. 
@@ -9,7 +9,7 @@ The day will be divided into several parts (time is only tentative):
 3. (30 min) Explanaition of MQTT with demonstration.
 4. (45 min) Exercise: A simple chat communication workflow over the internet using MQTT.
 5. (45 min) Exercise: Deploying your own Mosquitto MQTT broker and running several examples using Grasshopper.
-6. (60-90 min) presentation of your projects and discussion.
+6. (60-90 min) Presentation of your projects and discussion.
 7. (rest of the time) Group work with me running (virtually) around OR and explanation of some more specilized workflow or example relevant to everyone
 
 If we still have time we can also briefly go over representational state transfer (REST).
@@ -38,13 +38,14 @@ In order to have a smooth workshop experience and to avoid wasting time I put to
 	- Open terminal (PowerShell or Command Prompt) as admin and run `ipy -m ensurepip` 
 	- After installation finishes go to your ipy installation folder and copy `pip.exe` from Scripts to the root ipy installation folder.
 	- Finally rename `pip.exe` in the ipy installation folder to `ipip.exe`
-	- Test your installation by starting a new terminal (PowerShell or Command Prompt) and typing `ipip -V". It should show in your terminal `pip 8.1.1 from c:\program files\ironpython 2.7\Lib\site-packages (python 2.7)" (or very similar). If it does not you did something wrong and you have to fix it (use google or send me an email).
+	- Test your installation by starting a new terminal (PowerShell or Command Prompt) and typing `ipip -V`. It should show in your terminal `pip 8.1.1 from c:\program files\ironpython 2.7\Lib\site-packages (python 2.7)` (or very similar). If it does not you did something wrong and you have to fix it (use google or send me an email).
 	- Test your installation by typing `ipip install pyyaml`.
 4. Configure python extra paths in Rhino
 	- Open Rhino and go to `Tools>Python Script>Edit...`
 	- In the Python Script window go to `Tools>Settings` and click on an icon `Add to search path`
 	- Select the `Lib/site-packages` folder from your ipy installation folder (probably `C:\Program Files\IronPython 2.7\Lib\site-packages`) and press `OK`
-	- Test your setup by opening Grasshopper, putting GhPython Script component on a canvas and write `import yaml`. Run your script and if it does not show an error all is good.
+	- You might need to restart your Rhino before the new path is picked up by Python (I am unsure about that).
+	- Test your setup by opening Grasshopper, putting GhPython Script component on a canvas and writing `import yaml`. Run your GhPython Script component and if it does not show an error all is good. 
 
 ![Rhino Python Script setup](images/rhino_python_setup.PNG?raw=true)
 
