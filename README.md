@@ -1,7 +1,7 @@
 # COM_Workshop_ITECH2020
 ## Introduction
 Dear participants,
-<p>Our workshop day will start with a lecture that will focus on general electronic and machine-to-machine (m2m) communication following by a workshop where we will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s) using MQTT.</p>
+<p>Our workshop day will start with a lecture that will focus on general electronic and machine-to-machine (m2m) communication followed by a workshop where we will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s) using MQTT.</p>
 
 The day will be divided into several parts (time is only tentative):
 1. (60 min) Lecture focusing on basics of electronic communication and standard communication patterns and protocols. 
