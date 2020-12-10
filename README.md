@@ -88,7 +88,7 @@ https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
 https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php  
 
 # Workshop resources
-https://github.com/kyjanond/paho.mqtt.ipy (to install: `ipy -m pip install git+https://github.com/kyjanond/paho.mqtt.ipy.git`) !!!Be sure to install GIT before!!!
+https://github.com/kyjanond/paho.mqtt.ipy (to install: `ipy -m pip install git+https://github.com/kyjanond/paho.mqtt.ipy.git`) !!!Be sure to install GIT before!!!  
 https://github.com/eclipse/paho.mqtt.python (to install: `python -m pip install paho-mqtt` or `py-3 -m pip install paho-mqtt`)
 
 # Connecting zigbee devices to mqtt (temperature sensors, light etc.)
