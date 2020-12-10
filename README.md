@@ -1,7 +1,7 @@
 # COM_Workshop_ITECH2020
 ## Introduction
 Dear participants,
-<p>Our workshop day will start with a lecture that will focus on general electronic and machine-to-machine (m2m) communication following by a workshop where we will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s) using MQTT.</p>
+<p>Our workshop day will start with a lecture that will focus on general digital and machine-to-machine (m2m) communication following by a workshop where we will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s) using MQTT.</p>
 
 The day will be divided into several parts (time is only tentative):
 1. (60 min) Lecture focusing on basics of electronic communication and standard communication patterns and protocols. 
@@ -68,5 +68,25 @@ In order to have a smooth workshop experience and to avoid wasting time I put to
    - If you want the exact same look as mine then download the following color and icon theme:
      - https://marketplace.visualstudio.com/items?itemName=akamud.vscode-theme-onedark
      - https://marketplace.visualstudio.com/items?itemName=qinjia.seti-icons
+
+*Install Mosquitto on Ubuntu WSL:*
+1. Update and upgrade: `sudo apt update && sudo apt upgrade -y`
+2. Add development repository: `sudo apt-add-repository ppa:mosquitto-dev/mosquitto-ppa`
+3. Update: `sudo apt update`
+4. Install: `sudo apt install mosquitto mosquitto-clients`
+
+## Resources
+# Manuals and tutorials
+http://www.steves-internet-guide.com/
+https://www.hivemq.com/mqtt-essentials/
+https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
+https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php
+
+# Workshop resources
+https://github.com/kyjanond/paho.mqtt.ipy (to install: `ipy -m pip install git+https://github.com/kyjanond/paho.mqtt.ipy.git`)
+https://github.com/eclipse/paho.mqtt.python (to install: `python -m pip install paho-mqtt` or `py-3 -m pip install paho-mqtt`)
+
+# Other
+http://www.hivemq.com/demos/websocket-client/
 
 PLEASE CHECK THIS REPOSITORY AN EVENING BEFORE OUR WORKSHOP IN CASE I MAKE SOME UPDATES.
