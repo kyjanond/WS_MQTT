@@ -77,6 +77,8 @@ In order to have a smooth workshop experience and to avoid wasting time I put to
 
 ## Resources
 # Manuals and tutorials
+https://internetofthingsagenda.techtarget.com/definition/Internet-of-Things-IoT
+https://www.postscapes.com/internet-of-things-protocols/
 http://www.steves-internet-guide.com/
 https://www.hivemq.com/mqtt-essentials/
 https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html

@@ -10,7 +10,7 @@
 # Contributors:
 #    Ondrej Kyjanek - initial implementation
 
-# This shows a simple example of standard logging with an MQTT subscriber client.
+# This shows a simple example of a chat application with mqtt.
 
 import paho.mqtt.client as mqttc
 import paho.mqtt.properties as properties
