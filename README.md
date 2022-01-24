@@ -1,4 +1,4 @@
-# COM_Workshop_ITECH2020
+# COM_Workshop_ITECH2022
 ## Introduction
 Dear participants,
 <p>Our workshop day will focus on general digital and machine-to-machine (m2m). We will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s).</p>
@@ -37,6 +37,7 @@ My setup will be as follows:
 	- https://github.com/IronLanguages/ironpython2/releases/tag/ipy-2.7.8
 	- 2.7.8 is a version for Rhino 6. You should check what version of IroPython you have if you are running any other Rhino version. 
 	Probably the easiest way to check the version is to make a new Python component in Grasshopper, import `sys` and type `print(sys.version)`. See the screenshot bellow.
+	![Rhino Python Script setup](images/Rhino-python-version.png?raw=true)
 2. Configure Environmental variables
 	- Append ipy installation folder path (probably `C:\Program Files\IronPython 2.7`) to your PATH environmental variable`
 	- Test your installation by starting a new terminal (PowerShell or Command Prompt) and typing `ipy -V`. It should show in your terminal `IronPython 2.7.8 2.7.8.0 on .NET 4.0.30319.42000` (or very similar). If it does not you did something wrong and you have to fix it (use google or send me an email).
