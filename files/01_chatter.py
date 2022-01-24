@@ -20,16 +20,22 @@ logging.basicConfig(level=logging.INFO)
 
 HOST = "broker.hivemq.com"
 PORT = 1883
-TOPIC = "ITECH_COM_2020/chatroom"
-STATUS_TOPIC = "ITECH_COM_2020/chatroom/status"
+TOPIC = "ITECH_COM_2022/chatroom"
+STATUS_TOPIC = "ITECH_COM_2022/chatroom/status"
 USERNAME = "OKY"
 
 def on_message(client, userdata, msg):
+    #payload is utf-8 encoded string so we need to decode it first
     try:
-        print("{0[0][1]}: {1}".format(
-            msg.properties.UserProperty,
-            msg.payload.decode('utf-8'))
-            )
+        if hasattr(msg.properties, "UserProperty"):
+            print("{0[0][1]}: {1}".format(
+                msg.properties.UserProperty,
+                msg.payload.decode('utf-8'))
+                )
+        else:
+            print("UnknownUser: {0}".format(
+                msg.payload.decode('utf-8'))
+                )
     except Exception as e:
         logging.error(e)
 
@@ -64,10 +70,10 @@ def main():
     client.connect(HOST,PORT)
     client.loop_start()
     logging.info("Loop started")
-    client.subscribe("ITECH_COM_2020/#")
+    client.subscribe("ITECH_COM_2022/#")
 
     while True:
-        message = input()
+        message = raw_input ()
         client.publish(
             TOPIC,
             payload=message,

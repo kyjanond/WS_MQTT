@@ -23,9 +23,9 @@ logging.basicConfig(level=logging.INFO)
 HOST = "broker.hivemq.com"
 #HOST = "localhost" # or 127.0.0.1
 PORT = 1883
-TOPIC = "ITECH_COM_2020/chatroom"
+TOPIC = "ITECH_COM_2022/chatroom"
 USERNAME = "OKY"
-STATUS_TOPIC = "ITECH_COM_2020/status"
+STATUS_TOPIC = "ITECH_COM_2022/status"
 
 def on_message(client, userdata, msg):
     try:
@@ -59,7 +59,7 @@ def main(client):
     client.connect(HOST,PORT)
     client.loop_start()
     logging.info("Loop started")
-    client.subscribe("ITECH_COM_2020/#")
+    client.subscribe("ITECH_COM_2022/#")
 
     while True:
         topublish = input()

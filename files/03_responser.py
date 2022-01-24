@@ -25,7 +25,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 HOST = "localhost"
 PORT = 1883
-TOPIC = "ITECH_COM_2020/service"
+TOPIC = "ITECH_COM_2022/service"
 
 msg_queue = deque()
 

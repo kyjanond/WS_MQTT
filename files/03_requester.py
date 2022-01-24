@@ -26,7 +26,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 HOST = "localhost"
 PORT = 1883
-TOPIC = "ITECH_COM_2020/service"
+TOPIC = "ITECH_COM_2022/service"
 
 msg_queue = deque()
 
@@ -45,24 +45,34 @@ logging.info("Client started")
 
 try:
     publish_properties = properties.Properties(properties.PacketTypes.PUBLISH)
+    #this has to be utf-8 encoded string
     publish_properties.ResponseTopic = (TOPIC+"/res").encode('utf-8')
-    publish_properties.CorrelationData = uuid.uuid4().bytes
-    logging.info("Publishing with response topic: {} and correlation data: {}".format(publish_properties.ResponseTopic,publish_properties.CorrelationData))
-    ret = req_client.publish(TOPIC+"/req", time.time(), 1,
+    #this has to be binary data
+    publish_properties.CorrelationData = bytes(uuid.uuid4().hex, encoding='utf-8')
+    logging.info(
+        "Publishing with response topic: {} \
+            and correlation data: {}".format(
+            publish_properties.ResponseTopic,
+            publish_properties.CorrelationData
+        )
+    )
+    ret = req_client.publish(TOPIC+"/req", str(time.time()), 1,
                         properties=publish_properties)
     logging.info(ret)
 
     start_t = time.time()
     while len(msg_queue)<1 and time.time()-start_t<10:
         time.sleep(0.001)
-    
+
     response = msg_queue.popleft()
+    #payload is utf-8 encoded string so we need to decode it first
     logging.info("Response payload: {}".format(response.payload.decode('utf-8')))
     logging.info("SUCCESS!!!")
 
 except Exception as e:
     logging.error(e)
     logging.error("FAIL")
+    raise(e)
 finally:
     req_client.disconnect()
     time.sleep(2)

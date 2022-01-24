@@ -25,9 +25,9 @@ logging.basicConfig(level=logging.INFO)
 HOST = "broker.hivemq.com"
 #HOST = "localhost" # or 127.0.0.1
 PORT = 1883
-TOPIC = "ITECH_COM_2020/values"
+TOPIC = "ITECH_COM_2022/values"
 USERNAME = "OKY"
-STATUS_TOPIC = "ITECH_COM_2020/status"
+STATUS_TOPIC = "ITECH_COM_2022/status"
 
 def on_message(client, userdata, msg):
     parsed_msg = json.loads(msg.payload)
@@ -59,7 +59,7 @@ def main(client):
     client.connect(HOST,PORT)
     client.loop_start()
     logging.info("Loop started")
-    client.subscribe("ITECH_COM_2020/#")
+    client.subscribe("ITECH_COM_2022/#")
 
     value_A = 0
     value_B = 0
