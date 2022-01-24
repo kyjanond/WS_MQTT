@@ -84,61 +84,46 @@ My setup will be as follows:
 4. Install: `sudo apt install mosquitto mosquitto-clients`
 
 ## Resources
-# Manuals and tutorials
-https://internetofthingsagenda.techtarget.com/definition/Internet-of-Things-IoT
+### Manuals and tutorials
+https://internetofthingsagenda.techtarget.com/definition/Internet-of-Things-IoT  
+https://www.postscapes.com/internet-of-things-protocols/  
+http://www.steves-internet-guide.com/  
+https://www.hivemq.com/mqtt-essentials/  
+https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/  
+https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html  
+https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php  
 
-https://www.postscapes.com/internet-of-things-protocols/
-
-http://www.steves-internet-guide.com/
-
-https://www.hivemq.com/mqtt-essentials/
-
-https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/
-
-https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
-
-https://www.eclipse.org/paho/index.php?page=clients/python/docs/index.php
-
-# Workshop resources
-https://github.com/kyjanond/paho.mqtt.ipy (to install: `ipy -m pip install git+https://github.com/kyjanond/paho.mqtt.ipy.git`) 
-
+### Workshop resources
+https://github.com/kyjanond/paho.mqtt.ipy (to install: `ipy -m pip install git+https://github.com/kyjanond/paho.mqtt.ipy.git`) !!!Be sure to install GIT before!!!  
 https://github.com/eclipse/paho.mqtt.python (to install: `python -m pip install paho-mqtt` or `py-3 -m pip install paho-mqtt`)
 
-# Connecting zigbee devices to mqtt (temperature sensors, light etc.)
+### Connecting zigbee devices to mqtt (temperature sensors, light etc.)
 https://github.com/koenkk/zigbee2mqtt 
 
-# Arduino
-https://www.arduino.cc/reference/en/libraries/mqtt-client/
-
+### Arduino
+https://www.arduino.cc/reference/en/libraries/mqtt-client/  
 https://github.com/knolleary/pubsubclient
 
-# Raspberry Pi Mosquitto broker
-https://mosquitto.org/blog/2013/01/mosquitto-debian-repository/
-
+### Raspberry Pi Mosquitto broker
+https://mosquitto.org/blog/2013/01/mosquitto-debian-repository/  
 https://www.instructables.com/Installing-MQTT-BrokerMosquitto-on-Raspberry-Pi/
 
-# Home Assistant
+### Home Assistant
 https://www.home-assistant.io/integrations/mqtt/
 
-# Cloud based MQTT brokers (free and paid)
-https://www.hivemq.com/public-mqtt-broker/
-
-https://flespi.com/mqtt-api
-
-https://www.hivemq.com/cloud/
-
-https://www.cloudmqtt.com/plans.html
-
-https://myqtthub.com/en
-
+### Cloud based MQTT brokers (free and paid)
+https://www.hivemq.com/public-mqtt-broker/  
+https://flespi.com/mqtt-api  
+https://www.hivemq.com/cloud/  
+https://www.cloudmqtt.com/plans.html  
+https://myqtthub.com/en  
 https://docs.aws.amazon.com/iot/latest/developerguide/mqtt.html
 
-# InfluxDB and Grafana (time series database and web-based visualization)
-https://simonhearne.com/2020/pi-influx-grafana/
-
+### InfluxDB and Grafana (time series database and web-based visualization)
+https://simonhearne.com/2020/pi-influx-grafana/  
 https://github.com/influxdata/telegraf/tree/master/plugins/inputs/mqtt_consumer
 
-# Other
+### Other
 http://www.hivemq.com/demos/websocket-client/
 
 PLEASE CHECK THIS REPOSITORY AN EVENING BEFORE OUR WORKSHOP IN CASE I MAKE SOME UPDATES.
