@@ -50,7 +50,6 @@ My setup will be as follows:
 	- In the Python Script window go to `Tools>Settings` and click on an icon `Add to search path`
 	- Select the `Lib/site-packages` folder from your ipy installation folder (probably `C:\Program Files\IronPython 2.7\Lib\site-packages`) and press `OK`
 	- You might need to restart your Rhino before the new path is picked up by Python (I am unsure about that).
-	- Test your setup by opening Grasshopper, putting GhPython Script component on a canvas and writing `import yaml`. Run your GhPython Script component and if it does not show an error all is good. 
 
 ![Rhino Python Script setup](images/rhino_python_setup.PNG?raw=true)
 
