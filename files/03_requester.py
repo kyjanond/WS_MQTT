@@ -22,9 +22,9 @@ from collections import deque
 import uuid
 import logging
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.INFO)
 
-HOST = "localhost"
+HOST = "127.0.0.1"
 PORT = 1883
 TOPIC = "ITECH_COM_2022/service"
 
@@ -56,7 +56,8 @@ try:
             publish_properties.CorrelationData
         )
     )
-    ret = req_client.publish(TOPIC+"/req", str(time.time()), 1,
+    msg = 82934
+    ret = req_client.publish(TOPIC+"/req", msg, 1,
                         properties=publish_properties)
     logging.info(ret)
 

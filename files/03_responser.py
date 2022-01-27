@@ -47,9 +47,10 @@ try:
         if len(msg_queue)>0:
             request = msg_queue.popleft()
             logging.info("Request payload: {}".format(request.payload))
+            msg = "Response to: {}".format(request.payload.decode('utf-8'))
             res_client.publish(
                 request.properties.ResponseTopic,
-                payload="Response to: {}".format(request.payload.decode('utf-8')),
+                payload=float(request.payload)**2,
                 properties=request.properties)
         else:
             time.sleep(0.01)
