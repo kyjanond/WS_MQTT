@@ -1,7 +1,9 @@
 # COM_Workshop_ITECH2022
 ## Introduction
 Dear participants,
+
 <p>Our workshop day will focus on general digital and machine-to-machine (m2m) communication. We will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s).</p>
+
 
 The day will be divided into several parts (time is only tentative and the schedule is rough):
 1. (30-60 min) Discussion and questions about the lecture video. 
