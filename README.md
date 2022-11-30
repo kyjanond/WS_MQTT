@@ -1,6 +1,7 @@
 # COM_MQTT_ITECH
 ## Introduction
 Dear participants,
+
 <p>Our workshop day will focus on general digital and machine-to-machine (m2m) communication. We will write together some simple m2m communication workflows using the Message Queuing Telemetry Transport (MQTT) protocol. In the end of the workshop you will be hopefully confident and able to design communication strategies for your project(s).</p>
 
 ## Terms to know
@@ -56,7 +57,7 @@ My setup will be as follows:
 	- Select the `Lib/site-packages` folder from your ipy installation folder (probably `C:\Program Files\IronPython 2.7\Lib\site-packages`) and press `OK`
 	- You might need to restart your Rhino before the new path is picked up by Python (I am unsure about that).
 	![Rhino Python Script setup](images/rhino_python_setup.PNG?raw=true)
-1. Test your setup
+2. Test your setup
 	- Test your setup by opening Grasshopper, putting GhPython Script component on a canvas and writing `import paho.mqtt.client as mqttc`. Run your GhPython Script component and if it does not show an error all is good. 
 
 
@@ -106,8 +107,8 @@ https://github.com/eclipse/paho.mqtt.python (to install: `python -m pip install 
 https://github.com/koenkk/zigbee2mqtt 
 
 ### Arduino
-https://github.com/256dpi/arduino-mqtt
-https://github.com/knolleary/pubsubclient
+https://github.com/256dpi/arduino-mqtt/    
+https://github.com/knolleary/pubsubclient/
 
 ### Raspberry Pi Mosquitto broker
 https://mosquitto.org/blog/2013/01/mosquitto-debian-repository/  
