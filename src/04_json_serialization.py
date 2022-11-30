@@ -3,10 +3,6 @@
 
 # Copyright (c) 2020 Ondrej Kyjanek <ondrej.kyjanek@gmail.com>
 #
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse MIT license
-# which accompanies this distribution.
-#
 # Contributors:
 #    Ondrej Kyjanek - initial implementation
 
@@ -25,13 +21,19 @@ logging.basicConfig(level=logging.INFO)
 HOST = "broker.hivemq.com"
 #HOST = "localhost" # or 127.0.0.1
 PORT = 1883
-TOPIC = "ITECH_COM_2022/values"
 USERNAME = "OKY"
-STATUS_TOPIC = "ITECH_COM_2022/status"
+BASE_TOPIC = "ITECH_COM_WS"
+PUB_TOPIC = "{}/values".format(BASE_TOPIC)
+SUB_TOPIC = "{}/#".format(BASE_TOPIC)
+STATUS_TOPIC = "{}/status".format(BASE_TOPIC)
+
 
 def on_message(client, userdata, msg):
     parsed_msg = json.loads(msg.payload)
-    print(parsed_msg["timestamp"],parsed_msg["values"][0])
+    print("REC: {}, {}".format(
+        parsed_msg["timestamp"],
+        parsed_msg["values"]
+    ))
 
 def on_user_status(client, userdata, msg):
     print("STATUS",msg.payload.decode("utf-8"))
@@ -52,14 +54,14 @@ def main(client):
     
     client.enable_logger(logging.getLogger())
 
-    client.message_callback_add(TOPIC,on_message)
+    client.message_callback_add(PUB_TOPIC,on_message)
     client.message_callback_add(STATUS_TOPIC,on_user_status)
     client.on_subscribe = on_sub
     
     client.connect(HOST,PORT)
     client.loop_start()
     logging.info("Loop started")
-    client.subscribe("ITECH_COM_2022/#")
+    client.subscribe(SUB_TOPIC)
 
     value_A = 0
     value_B = 0
@@ -69,11 +71,15 @@ def main(client):
         value_B+=10
         msg = {"timestamp":time.time(),"values":[value_A,value_B]}
         client.publish(
-            TOPIC,
+            PUB_TOPIC,
             json.dumps(msg),
             qos=0,
             retain=False,
-            properties=props)
+            properties=props
+        )
+        print("PUB: {}".format(
+            msg
+        ))
         time.sleep(2)
 
     #client.publish(TOPIC,payload=b"hello")

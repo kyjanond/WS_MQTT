@@ -3,12 +3,8 @@
 
 # Copyright (c) 2020 Ondrej Kyjanek <ondrej.kyjanek@gmail.com>
 #
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse MIT license
-# which accompanies this distribution.
-#
 # Contributors:
-#    Ondrej Kyjanek - initial implementation
+#    Ondrej Kyjanek - initial implementationn
 
 # This shows a simple example of a request/response pattern with MQTT.
 # First start the Responser (python 03_responser.py) and then the Requester (python 03_requester.py)
@@ -23,9 +19,10 @@ import logging
 
 logging.basicConfig(level=logging.DEBUG)
 
-HOST = "localhost"
+HOST = "broker.hivemq.com"
 PORT = 1883
-TOPIC = "ITECH_COM_2022/service"
+BASE_TOPIC = "ITECH_COM_WS"
+TOPIC = "{}/service".format(BASE_TOPIC)
 
 msg_queue = deque()
 

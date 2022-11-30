@@ -3,10 +3,6 @@
 
 # Copyright (c) 2020 Ondrej Kyjanek <ondrej.kyjanek@gmail.com>
 #
-# All rights reserved. This program and the accompanying materials
-# are made available under the terms of the Eclipse MIT license
-# which accompanies this distribution.
-#
 # Contributors:
 #    Ondrej Kyjanek - initial implementation
 
@@ -20,8 +16,10 @@ logging.basicConfig(level=logging.INFO)
 
 HOST = "broker.hivemq.com"
 PORT = 1883
-TOPIC = "ITECH_COM_2022/chatroom"
-STATUS_TOPIC = "ITECH_COM_2022/chatroom/status"
+BASE_TOPIC = "ITECH_COM_WS"
+PUB_TOPIC = "{}/chatroom".format(BASE_TOPIC)
+SUB_TOPIC = "{}/#".format(BASE_TOPIC)
+STATUS_TOPIC = "{}/chatroom/status".format(BASE_TOPIC)
 USERNAME = "OKY"
 
 def on_message(client, userdata, msg):
@@ -63,19 +61,19 @@ def main():
     props.UserProperty = ("name",USERNAME)
 
     client.message_callback_add(STATUS_TOPIC,on_user_status)
-    client.message_callback_add(TOPIC,on_message)
+    client.message_callback_add(PUB_TOPIC,on_message)
     
     client.will_set(STATUS_TOPIC, payload="{} disconnected".format(USERNAME),properties=props)
 
     client.connect(HOST,PORT)
     client.loop_start()
     logging.info("Loop started")
-    client.subscribe("ITECH_COM_2022/#")
+    client.subscribe(SUB_TOPIC)
 
     while True:
-        message = raw_input ()
+        message = input()
         client.publish(
-            TOPIC,
+            PUB_TOPIC,
             payload=message,
             qos=2,
             retain=False,
