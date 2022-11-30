@@ -60,8 +60,6 @@ My setup will be as follows:
 2. Test your setup
 	- Test your setup by opening Grasshopper, putting GhPython Script component on a canvas and writing `import paho.mqtt.client as mqttc`. Run your GhPython Script component and if it does not show an error all is good. 
 
-
-
 ### Install Python 3.10 (if you don't have it already):
 
 1. If you are working with several Python version on Windows please read https://stackoverflow.com/a/57504609/7597893
@@ -85,6 +83,13 @@ My setup will be as follows:
      - https://marketplace.visualstudio.com/items?itemName=qinjia.seti-icons
 3. install git
 	- https://git-scm.com/download/win
+
+### Install Arduino IDE and libraries
+1. Install Arduino IDE
+	- https://docs.arduino.cc/software/ide-v1/tutorials/Windows
+2. Install libraries from arduino IDE library repository
+	- https://github.com/256dpi/arduino-mqtt/ 
+	- https://github.com/knolleary/pubsubclient/
 
 ### Install Mosquitto on Ubuntu WSL:
 1. Update and upgrade: `sudo apt update && sudo apt upgrade -y`
