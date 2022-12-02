@@ -84,12 +84,11 @@ My setup will be as follows:
 3. install git
 	- https://git-scm.com/download/win
 
-### Install Arduino IDE and libraries
-1. Install Arduino IDE
-	- https://docs.arduino.cc/software/ide-v1/tutorials/Windows
-2. Install libraries from arduino IDE library repository
-	- https://github.com/256dpi/arduino-mqtt/ 
-	- https://github.com/knolleary/pubsubclient/
+### Arduino development setup
+1. Install PlatformIO in vscode
+	- https://platformio.org/install/ide?install=vscode
+2. Get familiar with PlatformIO
+	- https://docs.platformio.org/en/latest/integration/ide/vscode.html#quick-start
 
 ### Install Mosquitto on Ubuntu WSL:
 1. Update and upgrade: `sudo apt update && sudo apt upgrade -y`
