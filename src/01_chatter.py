@@ -17,8 +17,8 @@ logging.basicConfig(level=logging.INFO)
 HOST = "broker.hivemq.com"
 PORT = 1883
 BASE_TOPIC = "ITECH_COM_WS"
-PUB_TOPIC = "{}/chatroom".format(BASE_TOPIC)
-SUB_TOPIC = "{}/#".format(BASE_TOPIC)
+PUB_TOPIC = "{}/chatroom/pub".format(BASE_TOPIC)
+SUB_TOPIC = "{}/chatroom/pub".format(BASE_TOPIC)
 STATUS_TOPIC = "{}/chatroom/status".format(BASE_TOPIC)
 USERNAME = "OKY"
 
@@ -46,7 +46,11 @@ def on_subscribe(client, userdata, mid, granted_qos, properties):
 def on_disconnect(client, userdata, rc, properties):
     logging.info("Disconnected {}".format(rc))
 
-def on_connect(client, userdata, flags, rc, properties):
+def on_connect(client:mqttc.Client, userdata, flags, rc, properties):
+    client.publish(
+        STATUS_TOPIC, 
+        payload="{} connected".format(USERNAME)
+    )
     logging.info("Connected {}".format(rc))
 
 def main():
@@ -68,7 +72,10 @@ def main():
     client.connect(HOST,PORT)
     client.loop_start()
     logging.info("Loop started")
-    client.subscribe(SUB_TOPIC)
+    client.subscribe([
+        (SUB_TOPIC,1),
+        (STATUS_TOPIC,2)
+    ])
 
     while True:
         message = input()
