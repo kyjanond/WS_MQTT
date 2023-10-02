@@ -15,7 +15,7 @@ logging.basicConfig(level=logging.INFO)
 
 HOST = "broker.hivemq.com"
 PORT = 1883
-BASE_TOPIC = "ITECH_COM_WS"
+BASE_TOPIC = "MI_DETECT_MQTT"
 PUB_TOPIC = "{}/chatroom".format(BASE_TOPIC)
 SUB_TOPIC = "{}/#".format(BASE_TOPIC)
 

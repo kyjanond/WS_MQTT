@@ -21,7 +21,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 HOST = "broker.hivemq.com"
 PORT = 1883
-BASE_TOPIC = "ITECH_COM_WS"
+BASE_TOPIC = "MI_DETECT_MQTT"
 TOPIC = "{}/service".format(BASE_TOPIC)
 
 msg_queue = deque()
