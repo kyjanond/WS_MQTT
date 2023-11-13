@@ -48,6 +48,9 @@ My setup will be as follows:
 	- https://mosquitto.org/download/ 
 
 ## Resources
+### MQTT Explorer
+http://mqtt-explorer.com/
+
 ### Manuals and tutorials
 https://www.hivemq.com/mqtt-essentials/  
 https://www.hivemq.com/blog/mqtt-essentials-part-5-mqtt-topics-best-practices/  
